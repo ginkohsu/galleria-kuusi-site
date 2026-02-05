@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galleria Kuu-si</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f7f7;
+      --text: #111;
+      --muted: #777;
+      --accent: #000;
+      --maxw: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 28px 20px 10px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    nav {
+      margin-top: 16px;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+    }
+
+    nav a:hover { opacity: 0.6; }
+
+    main {
+      max-width: var(--maxw);
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+
+    .hero img {
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: 0.03em;
+    }
+
+    p { margin-bottom: 16px; }
+
+    .open-call {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .muted { color: var(--muted); }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 60px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* simple pages */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    @media (max-width: 700px) {
+      .logo { font-size: 22px; }
+      nav a { margin: 0 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Galleria Kuu-si</div>
+  <nav>
+    <a href="#" onclick="showPage('home')">Open Call</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('exhibitions')">Exhibitions</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME / OPEN CALL -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <img src="space1.jpg" alt="gallery space">
+      <img src="space2.jpg" alt="gallery space">
+      <img src="logo.jpg" alt="logo">
+    </div>
+
+    <div class="open-call">
+      <h1>Open Call</h1>
+      <p class="muted">Mid April 2026 – Mid October 2026</p>
+
+      <p>
+        Galleria Kuu-si is an artist & curator-run, non-profit exhibition space in central Helsinki.
+        Our compact street-facing space invites experimental, intimate, and process-based work.
+      </p>
+
+      <p>
+        We are looking for artists to activate the space as a small art laboratory in the city.
+        Exhibitions run for two weeks.
+      </p>
+
+      <p>
+        Fee: €400 per exhibition (shared if group show).<br>
+        Artists handle installation, insurance, and invigilation coordination.
+      </p>
+
+      <p>
+        Send proposal + images to:<br>
+        <strong>info@galleriakuusi.com</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="page">
+    <h1>About</h1>
+    <p>
+      Galleria Kuu-si is a small independent exhibition space located near Kamppi, Helsinki.
+      Run by artists, the gallery focuses on intimate presentations, new work, and
+      experimental formats.
+    </p>
+
+    <p>
+      The space operates as a flexible platform for emerging and mid-career artists,
+      with an emphasis on dialogue, process, and visibility within the city.
+    </p>
+
+    <p class="muted">
+      Address: Helsinki, Finland<br>
+      Instagram: @galleriakuusi
+    </p>
+  </section>
+
+  <!-- EXHIBITIONS -->
+  <section id="exhibitions" class="page">
+    <h1>Exhibitions</h1>
+
+    <p>
+      Upcoming and past exhibitions will be listed here.
+    </p>
+
+    <p class="muted">
+      Spring 2026 — Opening program coming soon.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  © Galleria Kuu-si
+</footer>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo(0,0);
+  }
+</script>
+
+</body>
+</html>

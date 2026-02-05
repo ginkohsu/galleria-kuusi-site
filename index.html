@@ -4,46 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galleria Kuu-si</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #f7f7f7;
-      --text: #111;
-      --muted: #777;
-      --accent: #000;
-      --maxw: 980px;
+      --bg: #f6f6f6;
+      --text: #000;
+      --muted: #666;
+      --maxw: 1000px;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
 
     header {
-      padding: 28px 20px 10px;
+      padding: 40px 20px 10px;
       text-align: center;
     }
 
-    .logo {
-      font-size: 26px;
-      letter-spacing: 0.08em;
-      font-weight: 500;
+    .logo-img {
+      width: 90px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    .logo-text {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
     }
 
     nav {
-      margin-top: 16px;
+      margin-top: 22px;
     }
 
     nav a {
-      margin: 0 14px;
+      margin: 0 18px;
       text-decoration: none;
       color: var(--text);
       font-size: 14px;
+      font-weight: 700;
       letter-spacing: 0.08em;
     }
 
@@ -51,20 +57,27 @@
 
     main {
       max-width: var(--maxw);
-      margin: 40px auto 80px;
+      margin: 60px auto 100px;
       padding: 0 20px;
     }
 
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
     .hero img {
-      width: 100%;
-      margin-bottom: 20px;
-      border-radius: 2px;
+      width: 30%;
+      min-width: 220px;
     }
 
     h1 {
       font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
       letter-spacing: 0.03em;
     }
 
@@ -74,65 +87,67 @@
       margin-top: 40px;
       padding-top: 20px;
       border-top: 1px solid #ddd;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .muted { color: var(--muted); }
 
     footer {
       text-align: center;
-      padding: 40px 20px 60px;
+      padding: 60px 20px 80px;
       font-size: 12px;
       color: var(--muted);
     }
 
-    /* simple pages */
     .page { display: none; }
     .page.active { display: block; }
 
     @media (max-width: 700px) {
-      .logo { font-size: 22px; }
-      nav a { margin: 0 8px; }
+      .hero img { width: 90%; }
+      .logo-text { font-size: 26px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Galleria Kuu-si</div>
+  <img src="logo.jpg" class="logo-img" alt="logo">
+  <div class="logo-text">Galleria Kuu-si</div>
+
   <nav>
-    <a href="#" onclick="showPage('home')">Open Call</a>
-    <a href="#" onclick="showPage('about')">About</a>
-    <a href="#" onclick="showPage('exhibitions')">Exhibitions</a>
+    <a href="#" onclick="showPage('home')">OPEN CALL</a>
+    <a href="#" onclick="showPage('about')">ABOUT</a>
+    <a href="#" onclick="showPage('exhibitions')">EXHIBITIONS</a>
   </nav>
 </header>
 
 <main>
 
-  <!-- HOME / OPEN CALL -->
   <section id="home" class="page active">
     <div class="hero">
-      <img src="space1.jpg" alt="gallery space">
-      <img src="space2.jpg" alt="gallery space">
-      <img src="logo.jpg" alt="logo">
+      <img src="space1.jpg" alt="space">
+      <img src="space2.jpg" alt="space">
     </div>
 
     <div class="open-call">
-      <h1>Open Call</h1>
+      <h1>OPEN CALL</h1>
       <p class="muted">Mid April 2026 – Mid October 2026</p>
 
       <p>
-        Galleria Kuu-si is an artist & curator-run, non-profit exhibition space in central Helsinki.
-        Our compact street-facing space invites experimental, intimate, and process-based work.
+        Galleria Kuu-si is an artist & curator-run exhibition space in central Helsinki.
+        A compact street-facing gallery for experimental and intimate presentations.
       </p>
 
       <p>
-        We are looking for artists to activate the space as a small art laboratory in the city.
+        We invite artists to activate the space as a small art laboratory in the city.
         Exhibitions run for two weeks.
       </p>
 
       <p>
-        Fee: €400 per exhibition (shared if group show).<br>
-        Artists handle installation, insurance, and invigilation coordination.
+        Fee: €400 per exhibition (shared for group shows).<br>
+        Artists manage installation, insurance, and invigilation coordination.
       </p>
 
       <p>
@@ -142,37 +157,22 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="page">
-    <h1>About</h1>
+    <h1>ABOUT</h1>
     <p>
-      Galleria Kuu-si is a small independent exhibition space located near Kamppi, Helsinki.
-      Run by artists, the gallery focuses on intimate presentations, new work, and
-      experimental formats.
-    </p>
-
-    <p>
-      The space operates as a flexible platform for emerging and mid-career artists,
-      with an emphasis on dialogue, process, and visibility within the city.
+      Galleria Kuu-si is a small independent artist-run exhibition space near Kamppi, Helsinki.
+      Focused on new work, dialogue, and intimate formats.
     </p>
 
     <p class="muted">
-      Address: Helsinki, Finland<br>
+      Helsinki, Finland<br>
       Instagram: @galleriakuusi
     </p>
   </section>
 
-  <!-- EXHIBITIONS -->
   <section id="exhibitions" class="page">
-    <h1>Exhibitions</h1>
-
-    <p>
-      Upcoming and past exhibitions will be listed here.
-    </p>
-
-    <p class="muted">
-      Spring 2026 — Opening program coming soon.
-    </p>
+    <h1>EXHIBITIONS</h1>
+    <p>Upcoming program will be announced soon.</p>
   </section>
 
 </main>

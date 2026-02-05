@@ -1,0 +1,174 @@
+/* Import modern sleek font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Root variables */
+:root {
+  --text: #f5f5f5;
+  --muted: #bdbdbd;
+  --accent: #c7ff2f;      /* yellow-green moon tone */
+  --maxw: 1000px;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text);
+  background: linear-gradient(rgba(42,43,44,0.8), rgba(42,43,44,0.8)),
+              url('moon_texture.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Helvetica', Arial, sans-serif;
+  font-weight: 700;
+  text-align: center; /* Keep headings centered for emphasis */
+}
+
+h1 { font-size: 28px; margin: 22px 0 16px; color: var(--accent); text-shadow: 0 0 6px var(--accent);}
+h2 { font-size: 24px; margin: 20px 0 14px; color: var(--accent); text-shadow: 0 0 4px var(--accent);}
+h3 { font-size: 20px; margin: 18px 0 12px; color: var(--accent); text-shadow: 0 0 3px var(--accent);}
+
+/* Paragraphs */
+p {
+  font-size: 18px;
+  max-width: 720px;
+  margin: 22px auto;
+  line-height: 1.9;
+}
+
+p.muted {
+  font-size: 16px;
+  color: var(--muted);
+  text-align: justify;
+}
+
+/* Lists */
+ul {
+  max-width: 720px;
+  margin: 18px auto 22px;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* Header */
+header {
+  padding: 44px 20px 10px;
+  text-align: center;
+  background-color: rgba(182,182,182,0.7);
+}
+
+.logo-img {
+  width: 110px;
+  margin: 0 auto 14px;
+  display: block;
+}
+
+.logo-text {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-shadow: 0 0 12px var(--accent);
+}
+
+/* Navigation */
+nav {
+  margin-top: 24px;
+}
+
+nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+nav a:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* Main container */
+main {
+  max-width: var(--maxw);
+  margin: 70px auto 110px;
+  padding: 0 20px;
+}
+
+/* Hero section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 60px;
+  justify-items: center;
+  margin-bottom: 60px;
+}
+
+.hero img {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Open Call section */
+.open-call {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Team images */
+.team-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.team-images img {
+  width: 12%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: brightness(0.95);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 70px 20px 90px;
+  font-size: 12px;
+  color: var(--muted);
+  font-family: 'Inter', 'Helvetica', Arial, sans-serif;
+}
+
+/* Pages */
+.page { display: none; }
+.page.active { display: block; }
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .hero img { width: 90%; }
+  .logo-text { font-size: 28px; }
+  body { font-size: 15px; }
+  p { max-width: 90%; }
+  .team-images img { width: 45%; }
+}
+

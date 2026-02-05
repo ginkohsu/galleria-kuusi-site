@@ -4,122 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galleria Kuu-si</title>
+<link rel="stylesheet" href="style.css">
 
-  <style>
-    :root {
-      --text: #f5f5f5;
-      --muted: #bdbdbd;
-      --accent: #c7ff2f;      /* yellow-green moon tone */
-      --maxw: 1000px;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
-      color: var(--text);
-      line-height: 1.6;
-      /* subtle moon surface under translucent dark gray */
-      background: linear-gradient(rgba(42,43,44,0.8), rgba(42,43,44,0.8)),
-                  url('moon_texture.jpg') no-repeat center center;
-      background-size: cover;
-    }
-
-    header {
-      padding: 44px 20px 10px;
-      text-align: center;
-      /* semi-transparent header so moon texture shows through */
-      background-color: rgba(182,182,182,0.7);
-    }
-
-    .logo-img {
-      width: 110px;
-      margin: 0 auto 14px;
-      display: block;
-    }
-
-    .logo-text {
-      font-size: 38px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      text-shadow: 0 0 12px var(--accent);
-    }
-
-    nav {
-      margin-top: 24px;
-    }
-
-    nav a {
-      margin: 0 18px;
-      text-decoration: none;
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-      opacity: 1;
-    }
-
-    main {
-      max-width: var(--maxw);
-      margin: 70px auto 110px;
-      padding: 0 20px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr;
-      row-gap: 60px;
-      justify-items: center;
-      margin-bottom: 60px;
-    }
-
-    .hero img {
-      width: 320px;
-      height: auto;
-      object-fit: contain;
-    }
-
-    h1 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      text-shadow: 0 0 6px var(--accent);
-    }
-
-    .open-call {
-      margin-top: 40px;
-      padding-top: 30px;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .muted { color: var(--muted); }
-
-    footer {
-      text-align: center;
-      padding: 70px 20px 90px;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .page { display: none; }
-    .page.active { display: block; }
-
-    @media (max-width: 700px) {
-      .hero img { width: 90%; }
-      .logo-text { font-size: 28px; }
-    }
-  </style>
 </head>
 <body>
 
@@ -144,28 +30,67 @@
 
     <div class="open-call">
       <h1>OPEN CALL</h1>
-      <p class="muted">XXXX</p>
-      <p>XXXX</p>
-      <p>XXXX</p>
-      <p>XXXX</p>
-      <p>XXXX</p>
+    <h2>MID APRIL – MID OCTOBER 2026</h2>
+
+    <p>Dear Artist,</p>
+
+    <p>Galleria Kuu-si is an <strong>artist- and curator-run, non-profit exhibition space</strong> in central Helsinki, just 500 meters from Kamppi Metro Station. Our compact 22.5 m² space has a <strong>street-facing window</strong> on Eerikinkatu, perfect for sharing your work with the public.</p>
+
+    <p>We’re looking to create an <strong>art lab in the city</strong> — a place for fun, bold, diverse, and experimental projects. We provide <strong>basic supervision during open hours</strong>, help <strong>document and promote your show on social media</strong>, and offer <strong>curatorial support</strong> if needed. We do not take commissions on artwork sales.</p>
+
+    <p>Artists are responsible for <strong>installation, de-installation, transport, insurance, and hosting the exhibition opening</strong>. We are happy to assist on site within our abilities.</p>
+
+    <p>A <strong>two-week slot</strong> from mid-April to mid-October 2026 costs 450 euros, covering operational costs, including space rental, basic supervision, and social media promotion/documentation.</p>
+
+     <h3>HOW TO APPLY</h3>
+    <p>Submit <strong>ONE PDF</strong> in English (or Finnish if needed) to <strong>info@galleriakuusi.com</strong> including:</p>
+    <ul>
+         <li><strong>Page 1:</strong> Briefly tell us about yourself (one paragraph) and your preferred time period.</li>
+        <li><strong>Page 2:</strong> A short description of your exhibition idea and medium (max one page).</li>
+        <li><strong>Optional Page 3:</strong> Condensed CV (max two pages).</li
+        <li><strong>Page 4:</strong> Portfolio.</li>
+  </ul>
+
+  <p><strong>Deadline:</strong> 23:59, March 8th, 2026</p>
+
+  <p>Selected artists will be notified before April 1st. We are a very small team, so we can’t reply to every application individually.</p>
+
+  <p>Also note that our next round of call is in <strong>June/July 2026</strong> :)</p>
+
+  <p>Warmly,<br><strong>The Kuu-si Team</strong></p>
     </div>
   </section>
 
   <section id="about" class="page">
     <h1>ABOUT</h1>
-    <p>XXXX</p>
-    <p class="muted">XXXX</p>
+    <p>Galleria Kuu-si is an artist-run exhibition space located at Eerikinkatu 33, Helsinki.</p>
+    <p class="muted">The name of our space, <strong>Kuu-si</strong>, is inspired by W. Somerset Maugham's <em>The Moon and Sixpence</em>. It reflects the challenge many artists face: pursuing creative dreams while navigating the practical realities of everyday life.</p>
+	<p>Our aim is to support the art community in building a sustainable art practice. We are seeking funding to make the space rent-free whenever possible. We also encourage artists to collaborate with our twin sister, the craft and artisan shop <strong>Honobono</strong>, located next door. This collaboration can include workshops or consignment of smaller art/design objects, helping artists create a more sustainable practice.</p>
+
+    <p><strong>Contact</strong>: info@galleriakuusi.com</p>
+	<p><strong>INS</strong>: @galleriakuu_si</p> <br></br>
+    <h2>Team</h2>
+    <p>Curator & Founder: Ginko Hsu</p>
+        <!-- Team images -->
+    <div class="team-images">
+      <img src="team1.jpg" alt="Team member 1">
+    </div>
+	<p>Program Support: Kanny Wu</p>
+   <div class="team-images">
+      <img src="team2.jpg" alt="Team member 1">
+    </div>
   </section>
 
   <section id="exhibitions" class="page">
     <h1>EXHIBITIONS</h1>
-    <p>XXXX</p>
+    <p>The grand opening of Galleria Kuu-si and our first group exhibition is scheduled for March 26, 2026. Participating artists will be announced in due course.</p>
   </section>
 
 </main>
 
 <footer>
+	info@galleriakuusi.com
+	 <br> </br>
   © Galleria Kuu-si
 </footer>
 
@@ -179,3 +104,4 @@
 
 </body>
 </html>
+

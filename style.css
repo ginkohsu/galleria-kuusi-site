@@ -193,13 +193,29 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 700px) {
-  .hero img { width: 90%; }
+  .hero img { 
+    width: 90%; 
+    height: auto;
+  }
   .logo-text { font-size: 28px; }
   body { font-size: 15px; }
   p { max-width: 90%; }
   .team-images img { width: 45%; }
-    .manifesto-overlay {
-    animation: none;
+
+  /* Manifesto mobile adjustments */
+  .manifesto-overlay {
+    position: relative;          /* 取消 absolute 浮动 */
+    top: auto;                   /* 不再指定 top */
+    left: auto;                  /* 不再居中 */
+    transform: none;             /* 取消 translate */
+    max-width: 90%;              /* 占屏幕宽度 */
+    margin: 20px auto;           /* 居中显示并留空隙 */
+    padding: 15px 20px;          /* 缩小内边距 */
+    font-size: 0.9rem;           /* 缩小字体 */
+    line-height: 1.4rem;         /* 压缩行高 */
+    backdrop-filter: blur(3px);  /* 保留一点背景虚化 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 较小阴影 */
+    animation: none;             /* 取消浮动动画 */
   }
 }
 

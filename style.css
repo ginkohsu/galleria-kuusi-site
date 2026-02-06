@@ -123,7 +123,38 @@ main {
   height: auto;
   object-fit: contain;
 }
+.manifesto-overlay {
+  position: relative;
+  background: rgba(0,0,0,0.12);   /* 更轻的黑 */
+  padding: 26px 34px;
+  border-radius: 14px;
+  max-width: 520px;
+  text-align: center;
 
+  font-size: 0.88rem;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+  font-weight: 400;
+
+  margin: 60px auto;
+  backdrop-filter: blur(6px);    /* 更柔的虚化 */
+  
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* 气场感，不是压迫感 */
+  opacity: 0.92;
+}
+
+/* 非对抗感的轻浮动 */
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.manifesto-overlay {
+  animation: floaty 9s ease-in-out infinite;
+}
+
+/*
 .manifesto-overlay {
   position: relative;
   background: rgba(0,0,0,0.18);
@@ -139,7 +170,8 @@ main {
 
   margin: 50px auto;
   backdrop-filter: blur(3px);
-}
+} 
+*/
 
 /* Subtle floating animation */
 @keyframes floaty {
@@ -199,20 +231,26 @@ footer {
   p { max-width: 90%; }
   .team-images img { width: 45%; }
 
-  /* Manifesto mobile adjustments */
+ @media (max-width: 700px) {
+
   .manifesto-overlay {
-    position: relative;          /* 取消 absolute 浮动 */
-    top: auto;                   /* 不再指定 top */
-    left: auto;                  /* 不再居中 */
-    transform: none;             /* 取消 translate */
-    max-width: 90%;              /* 占屏幕宽度 */
-    margin: 20px auto;           /* 居中显示并留空隙 */
-    padding: 15px 20px;          /* 缩小内边距 */
-    font-size: 0.9rem;           /* 缩小字体 */
-    line-height: 1.4rem;         /* 压缩行高 */
-    backdrop-filter: blur(3px);  /* 保留一点背景虚化 */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 较小阴影 */
-    animation: none;             /* 取消浮动动画 */
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+
+    max-width: 92%;
+    margin: 24px auto;
+
+    padding: 18px 22px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+
+    background: rgba(0,0,0,0.10);
+    backdrop-filter: blur(4px);
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    animation: none;
   }
 }
 

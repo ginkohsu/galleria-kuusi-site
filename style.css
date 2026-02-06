@@ -115,7 +115,7 @@ main {
   row-gap: 60px;
   justify-items: center;
   margin-bottom: 60px;
-  position: relative; 
+
 }
 
 .hero img {
@@ -125,7 +125,6 @@ main {
 }
 /* Manifesto overlay */
 .manifesto-overlay {
-  position: absolute;          /* floats above the images */
   top: 15%;                    /* adjust vertical position */
   left: 50%;                   /* center horizontally */
   transform: translateX(-50%);

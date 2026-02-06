@@ -198,5 +198,9 @@ footer {
   body { font-size: 15px; }
   p { max-width: 90%; }
   .team-images img { width: 45%; }
+    .manifesto-overlay {
+    animation: none;
+  }
 }
+
 

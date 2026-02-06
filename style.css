@@ -123,24 +123,22 @@ main {
   height: auto;
   object-fit: contain;
 }
-/* Manifesto overlay */
+
 .manifesto-overlay {
-  top: 15%;                    /* adjust vertical position */
-  left: 50%;                   /* center horizontally */
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.35); /* semi-transparent dark for contrast */
-  padding: 25px 30px;
-  border-radius: 12px;
-  max-width: 80%;
+  position: relative;
+  background: rgba(0,0,0,0.18);
+  padding: 24px 30px;
+  border-radius: 10px;
+  max-width: 460px;
   text-align: center;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: var(--text);
-  backdrop-filter: blur(5px);   /* makes it floaty */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  animation: floaty 6s ease-in-out infinite alternate;
-  z-index: 10;                 /* makes sure it floats above images */
+
+  font-size: 0.85rem;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+
+  margin: 50px auto;
+  backdrop-filter: blur(3px);
 }
 
 /* Subtle floating animation */

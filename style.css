@@ -219,6 +219,36 @@ footer {
 /* Pages */
 .page { display: none; }
 .page.active { display: block; }
+/* Exhibition season */
+.season {
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+.season h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.month {
+  margin-bottom: 20px;
+}
+
+.month h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+}
+
+.month p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.month em {
+  font-style: italic;
+}
 
 /* Responsive adjustments */
 @media (max-width: 700px) {
